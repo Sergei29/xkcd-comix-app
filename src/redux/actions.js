@@ -1,7 +1,7 @@
 import axios from "axios";
 import actionsTypes from "./actions.types";
 //GET_CORS_PROXY: CORS Anywhere - see README.md
-const GET_CORS_PROXY = "http://cors-anywhere.herokuapp.com/";
+const GET_CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 
 export const fetchComicsStart = () => ({
 	type: actionsTypes.FETCH_START,
