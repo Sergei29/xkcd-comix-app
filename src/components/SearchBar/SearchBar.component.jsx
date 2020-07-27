@@ -16,6 +16,7 @@ const SearchBar = ({ history }) => {
 		event.preventDefault();
 		if (id === "") return;
 		history.push(`/${id}`);
+		setId("");
 	};
 
 	return (

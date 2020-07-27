@@ -1,3 +1,13 @@
+## CORS issue client side fetch create-react-app Case study:
+
+fetching from local dev-server throws CORS error with Chrome, as a temporary solution - use a proxy server to return CORS-OK header
+see: https://github.com/Rob--W/cors-anywhere/#documentation
+
+## Redux DevTools for Chrome used:
+
+in order to vew : install extension Redux DevTools on Chrome
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
