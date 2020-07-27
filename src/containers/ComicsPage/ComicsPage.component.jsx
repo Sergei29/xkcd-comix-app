@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchComicsById } from "../../redux/actions";
 import ComicsView from "../../components/Comics/ComicsView.component";
 
-const ComicsPage = ({ match, comicsList, fetchComicsById }) => {
+const ComicsPage = ({ match, loading, comicsList, fetchComicsById }) => {
 	const { id } = match.params;
 	const status = useRef({ willUnmount: false });
 	const [currentComics, setCurrentComics] = useState({});
@@ -27,7 +27,7 @@ const ComicsPage = ({ match, comicsList, fetchComicsById }) => {
 	return (
 		<>
 			<h1>Comics page {match.params.id}</h1>
-			{currentComics[id] ? (
+			{loading ? (
 				<p>Loading...</p>
 			) : (
 				<ComicsView title={title} img={img} num={num} alt={alt} />
@@ -38,6 +38,7 @@ const ComicsPage = ({ match, comicsList, fetchComicsById }) => {
 
 const mapStateToProps = (state) => ({
 	comicsList: state.comicsList,
+	loading: state.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
