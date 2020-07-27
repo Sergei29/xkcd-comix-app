@@ -1,7 +1,8 @@
 import React from "react";
+import { FooterContainer } from "./Footer.styles";
 
 const Footer = () => (
-	<>
+	<FooterContainer>
 		<h3>footer</h3>
 		<p>
 			<small>
@@ -10,7 +11,7 @@ const Footer = () => (
 				<a href="https://xkcd.com/">https://xkcd.com/</a>
 			</small>
 		</p>
-	</>
+	</FooterContainer>
 );
 
 export default Footer;

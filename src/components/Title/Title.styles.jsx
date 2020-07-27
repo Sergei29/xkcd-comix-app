@@ -8,4 +8,7 @@ export const TitleContainer = styled.div`
 	flex-direction: column;
 	margin-left: 2px;
 	border: 1.5px solid #071419;
+	@media screen and (max-width: 750px) {
+		margin-left: 0;
+	}
 `;
