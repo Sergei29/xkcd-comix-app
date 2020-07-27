@@ -1,1 +1,8 @@
-// action types for fetch start, fetch fail, success recenc comix, success ID comix:
+const actionsTypes = {
+	FETCH_START: "FETCH_START",
+	FETCH_RECENT_SUCCESS: "FETCH_RECENT_SUCCESS",
+	FETCH_ERROR: "FETCH_ERROR",
+	FETCH_BY_ID_SUCCESS: "FETCH_BY_ID_SUCCESS",
+};
+
+export default actionsTypes;
