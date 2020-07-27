@@ -3,6 +3,8 @@
 fetching from local dev-server throws CORS error with Chrome, as a temporary solution - use a proxy server to return CORS-OK header
 see: https://github.com/Rob--W/cors-anywhere/#documentation
 
+Huge Downside of the solution - it depends on proxy server;
+
 ## Redux DevTools for Chrome used:
 
 in order to vew : install extension Redux DevTools on Chrome

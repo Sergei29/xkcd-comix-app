@@ -12,3 +12,7 @@ export const TitleContainer = styled.div`
 		margin-left: 0;
 	}
 `;
+
+export const Heading = styled.h1`
+	font-size: 18px;
+`;

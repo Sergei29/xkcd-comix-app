@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { fetchRecent } from "../../redux/actions";
+import ComicsView from "../../components/Comics/ComicsView.component";
 
-const RecentComicsPage = ({ recentComics, fetchRecent }) => {
+const RecentComicsPage = ({ loading, recentComics, fetchRecent }) => {
 	const status = useRef({ willUnmount: false });
+	const { title, img, num, alt } = recentComics;
 
 	useEffect(() => {
 		if (
@@ -23,13 +25,19 @@ const RecentComicsPage = ({ recentComics, fetchRecent }) => {
 
 	return (
 		<>
-			<h1>recent comics page</h1>
+			<h2>Recent comics page</h2>
+			{loading ? (
+				<p>Loading...</p>
+			) : (
+				<ComicsView title={title} img={img} num={num} alt={alt} />
+			)}
 		</>
 	);
 };
 
 const mapStateToProps = (state) => ({
 	recentComics: state.recentComics,
+	loading: state.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({

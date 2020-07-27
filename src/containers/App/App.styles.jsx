@@ -7,6 +7,9 @@ export const AppContainer = styled.div`
 	@media screen and (max-width: 750px) {
 		width: 90%;
 	}
+	@media screen and (max-width: 1200px) {
+		width: 70%;
+	}
 `;
 
 export const MainContainer = styled.main`
