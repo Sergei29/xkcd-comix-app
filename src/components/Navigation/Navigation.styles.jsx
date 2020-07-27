@@ -9,6 +9,11 @@ export const NavigationContainer = styled.div`
 	flex-direction: column;
 	margin-right: 2px;
 	border: 1.5px solid #071419;
+	@media screen and (max-width: 750px) {
+		order: 2;
+		margin-top: 6px;
+		margin-right: 0;
+	}
 `;
 
 export const Navbar = styled.nav`
