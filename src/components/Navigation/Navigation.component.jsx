@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar.component";
 const Navigation = () => (
 	<NavigationContainer>
 		<Navbar>
-			<StyledLink to="/">Recent Comics</StyledLink>
+			<StyledLink to="/">Recent</StyledLink>
 		</Navbar>
 		<SearchBar />
 	</NavigationContainer>

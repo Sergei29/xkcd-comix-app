@@ -6,6 +6,8 @@ export const StyledForm = styled.form`
 	justify-content: space-between;
 	align-items: center;
 	margin: 3px 0;
+	width: 80%;
+	margin: 0 auto;
 `;
 
 export const StyledInput = styled.input`
@@ -14,6 +16,8 @@ export const StyledInput = styled.input`
 	border-radius: 6px;
 	padding: 2px 4px;
 	margin: 2px 0;
+	width: 100%;
+	box-sizing: border-box;
 `;
 
 export const SubmitButton = styled.button`
@@ -24,4 +28,5 @@ export const SubmitButton = styled.button`
 	margin: 2px 0;
 	color: #fff;
 	background-color: #96a8c8;
+	width: 100%;
 `;

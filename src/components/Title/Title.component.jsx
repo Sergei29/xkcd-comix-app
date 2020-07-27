@@ -1,10 +1,21 @@
 import React from "react";
-import { TitleContainer } from "./Title.styles";
+import { TitleContainer, Heading } from "./Title.styles";
+
+const Logo = (
+	<a href="https://xkcd.com">
+		<img
+			src="https://xkcd.com/s/0b7742.png"
+			alt="xkcd.com logo"
+			height="83"
+			width="185"
+		></img>
+	</a>
+);
 
 const Title = () => (
 	<TitleContainer>
-		<h1>title</h1>
-		<h2>Heading motto yo-Hhooo!</h2>
+		{Logo}
+		<Heading>A webcomic of romance, sarcasm, math, and language.</Heading>
 	</TitleContainer>
 );
 

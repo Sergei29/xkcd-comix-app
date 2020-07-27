@@ -7,6 +7,7 @@ export const NavigationContainer = styled.div`
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	margin-right: 2px;
 	border: 1.5px solid #071419;
 	@media screen and (max-width: 750px) {
@@ -20,11 +21,14 @@ export const Navbar = styled.nav`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 80%;
+	margin: 0 auto;
 `;
 
 export const StyledLink = styled(NavLink)`
-	display: inline-block;
-	width: 50%;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
 	border-radius: 6px;
 	text-decoration: none;
 	margin: 3px 0;
