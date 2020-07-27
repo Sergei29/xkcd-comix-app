@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10ceef5c0609a2a27a787eb853016e7c",
+    "revision": "d0a743daa59d8dfd7ae6373e00aad8f8",
     "url": "/xkcd-comix-app/index.html"
   },
   {
