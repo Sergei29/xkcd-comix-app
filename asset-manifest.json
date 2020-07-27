@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/xkcd-comix-app/static/css/main.b6d47e71.chunk.css",
+    "main.js": "/xkcd-comix-app/static/js/main.852bc00d.chunk.js",
+    "main.js.map": "/xkcd-comix-app/static/js/main.852bc00d.chunk.js.map",
+    "runtime-main.js": "/xkcd-comix-app/static/js/runtime-main.70ec30f9.js",
+    "runtime-main.js.map": "/xkcd-comix-app/static/js/runtime-main.70ec30f9.js.map",
+    "static/js/2.d561514e.chunk.js": "/xkcd-comix-app/static/js/2.d561514e.chunk.js",
+    "static/js/2.d561514e.chunk.js.map": "/xkcd-comix-app/static/js/2.d561514e.chunk.js.map",
+    "index.html": "/xkcd-comix-app/index.html",
+    "precache-manifest.9a05c7b4fe95e0c3637cfa5cdd1f1970.js": "/xkcd-comix-app/precache-manifest.9a05c7b4fe95e0c3637cfa5cdd1f1970.js",
+    "service-worker.js": "/xkcd-comix-app/service-worker.js",
+    "static/css/main.b6d47e71.chunk.css.map": "/xkcd-comix-app/static/css/main.b6d47e71.chunk.css.map",
+    "static/js/2.d561514e.chunk.js.LICENSE.txt": "/xkcd-comix-app/static/js/2.d561514e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70ec30f9.js",
+    "static/js/2.d561514e.chunk.js",
+    "static/css/main.b6d47e71.chunk.css",
+    "static/js/main.852bc00d.chunk.js"
+  ]
+}
