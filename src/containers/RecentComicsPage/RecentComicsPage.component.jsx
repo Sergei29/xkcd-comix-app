@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchRecent } from "../../redux/actions";
 import ComicsView from "../../components/Comics/ComicsView.component";
 
-const RecentComicsPage = ({ loading, recentComics, fetchRecent }) => {
+export const RecentComicsPage = ({ loading, recentComics, fetchRecent }) => {
 	const status = useRef({ willUnmount: false });
 	const { title, img, num, alt } = recentComics;
 

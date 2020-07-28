@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchComicsById } from "../../redux/actions";
 import ComicsView from "../../components/Comics/ComicsView.component";
 
-const ComicsPage = ({ match, loading, comicsList, fetchComicsById }) => {
+export const ComicsPage = ({ match, loading, comicsList, fetchComicsById }) => {
 	const { id } = match.params;
 	const status = useRef({ willUnmount: false });
 	const [currentComics, setCurrentComics] = useState({});

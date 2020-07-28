@@ -1,14 +1,10 @@
 import { shallow } from "enzyme";
 import React from "react";
 
-import App from "./App";
+import App from "./App.component";
 
 describe("App", () => {
-	let wrapper;
-	beforeEach(() => {
-		wrapper = shallow(<App />);
-	});
-	it("should render the component", () => {
-		expect(wrapper.exists(".App")).toEqual(true);
+	it("should render the component without crashing", () => {
+		shallow(<App />);
 	});
 });

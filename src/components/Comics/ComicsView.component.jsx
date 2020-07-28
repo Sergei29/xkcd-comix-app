@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageFrame, Image } from "./ComicsView.styles";
 
-const Comics = ({ title, num, img, alt }) => {
+const ComicsView = ({ title, num, img, alt }) => {
 	return (
 		<div>
 			<h2>{title}</h2>
@@ -14,4 +14,4 @@ const Comics = ({ title, num, img, alt }) => {
 	);
 };
 
-export default Comics;
+export default ComicsView;
