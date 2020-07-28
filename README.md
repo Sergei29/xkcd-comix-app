@@ -1,9 +1,33 @@
+# Get Started:
+
+Browser: Chrome (recommended) / redux DevTools
+Add extension: https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+
+CLI:
+git clone https://github.com/sergejs-basangovs-ingresso/xkcd-comix-app.git
+cd xkcd-comix-app
+npm i
+
+## xkcd-comix-app
+SPA created with create-react-app;
+Additional libraries used: see config.json;
+Components: functional/hooks;
+Styling: accomplished with css-in-js `styled-components` library
+Global state: managed on client side with Redux library;
+Testing: basic unit testing with Jest and Enzyme;
+
+Currently working on (not completed yet) :
+
+-   HOC introduction for connected components
+
 ## CORS issue client side fetch create-react-app Case study:
 
 fetching from local dev-server throws CORS error with Chrome, as a temporary solution - use a proxy server to return CORS-OK header
 see: https://github.com/Rob--W/cors-anywhere/#documentation
 
-Huge Downside of the solution - it depends on proxy server;
+Huge Downside of the solution - personal project(reliability and maintenance in question) and it depends on proxy server;
+
+As long term solution suggested - own server-side CORS compliance implementation.
 
 ## Redux DevTools for Chrome used:
 
