@@ -3,7 +3,6 @@ import { FooterContainer } from "./Footer.styles";
 
 const Footer = () => (
 	<FooterContainer>
-		<h3>footer</h3>
 		<p>
 			<small>
 				This app is created for non-commercial purpose as training
