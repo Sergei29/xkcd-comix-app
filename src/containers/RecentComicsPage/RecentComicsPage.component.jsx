@@ -31,7 +31,6 @@ export const RecentComicsPage = ({
 
 	return (
 		<>
-			<h2>Recent comics page</h2>
 			{loading ? (
 				<p>Loading...</p>
 			) : error ? (
