@@ -33,7 +33,6 @@ export const ComicsPage = ({
 	}, []);
 	return (
 		<>
-			<h1>Comics page {match.params.id}</h1>
 			{loading ? (
 				<p>Loading...</p>
 			) : error ? (
