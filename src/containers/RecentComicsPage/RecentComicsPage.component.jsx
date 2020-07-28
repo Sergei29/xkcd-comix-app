@@ -2,8 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { fetchRecent } from "../../redux/actions";
 import ComicsView from "../../components/Comics/ComicsView.component";
+import ErrorView from "../../components/404/ErrorView.component";
 
-export const RecentComicsPage = ({ loading, recentComics, fetchRecent }) => {
+export const RecentComicsPage = ({
+	loading,
+	error,
+	recentComics,
+	fetchRecent,
+}) => {
 	const status = useRef({ willUnmount: false });
 	const { title, img, num, alt } = recentComics;
 
@@ -28,6 +34,8 @@ export const RecentComicsPage = ({ loading, recentComics, fetchRecent }) => {
 			<h2>Recent comics page</h2>
 			{loading ? (
 				<p>Loading...</p>
+			) : error ? (
+				<ErrorView />
 			) : (
 				<ComicsView title={title} img={img} num={num} alt={alt} />
 			)}
@@ -38,6 +46,7 @@ export const RecentComicsPage = ({ loading, recentComics, fetchRecent }) => {
 const mapStateToProps = (state) => ({
 	recentComics: state.recentComics,
 	loading: state.loading,
+	error: state.error,
 });
 
 const mapDispatchToProps = (dispatch) => ({
