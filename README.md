@@ -1,22 +1,25 @@
 # Get Started:
 
 Browser: Chrome (recommended) / redux DevTools
-Add extension: https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+
+-   Add extension: https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
 
 CLI:
-git clone https://github.com/sergejs-basangovs-ingresso/xkcd-comix-app.git
-cd xkcd-comix-app
-npm i
+
+-   git clone https://github.com/sergejs-basangovs-ingresso/xkcd-comix-app.git
+-   cd xkcd-comix-app
+-   npm i
 
 ## xkcd-comix-app
-SPA created with create-react-app;
-Additional libraries used: see config.json;
-Components: functional/hooks;
-Styling: accomplished with css-in-js `styled-components` library
-Global state: managed on client side with Redux library;
-Testing: basic unit testing with Jest and Enzyme;
 
-Currently working on (not completed yet) :
+-   SPA created with create-react-app;
+-   Additional libraries used: see config.json;
+-   Components: functional/hooks;
+-   Styling: accomplished with css-in-js `styled-components` library
+-   Global state: managed on client side with Redux library;
+-   Testing: basic unit testing with Jest and Enzyme;
+
+## Currently working on (not completed yet) :
 
 -   HOC introduction for connected components
 
