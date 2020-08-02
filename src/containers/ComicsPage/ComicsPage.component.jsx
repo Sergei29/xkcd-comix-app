@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { fetchComicsById } from "../../redux/actions";
 import ComicsView from "../../components/Comics/ComicsView.component";
@@ -12,25 +12,24 @@ export const ComicsPage = ({
 	fetchComicsById,
 }) => {
 	const { id } = match.params;
-	const status = useRef({ willUnmount: false });
 	const [currentComics, setCurrentComics] = useState({});
 	const { title, num, img, alt } = currentComics;
 
 	useEffect(() => {
-		if (!status.current.willUnmount) {
+		let willUnmount = false;
+
+		if (!willUnmount) {
 			fetchComicsById(id, comicsList);
 		}
+
 		if (comicsList[id]) {
 			setCurrentComics(comicsList[id]);
 		}
-	}, [id, comicsList, fetchComicsById]);
-
-	useEffect(() => {
 		return () => {
 			// cleanup for all api calls before unmount:
-			status.current.willUnmount = true;
+			willUnmount = true;
 		};
-	}, []);
+	}, [id, comicsList, fetchComicsById]);
 
 	const comicsView = currentComics.num ? (
 		<ComicsView title={title} num={num} img={img} alt={alt} />
