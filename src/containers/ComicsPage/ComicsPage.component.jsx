@@ -14,7 +14,7 @@ export const ComicsPage = ({
 	const { id } = match.params;
 	const status = useRef({ willUnmount: false });
 	const [currentComics, setCurrentComics] = useState({});
-	const { title, img, num, alt } = currentComics;
+	const { title, num, img, alt } = currentComics;
 
 	useEffect(() => {
 		if (!status.current.willUnmount) {
@@ -31,16 +31,13 @@ export const ComicsPage = ({
 			status.current.willUnmount = true;
 		};
 	}, []);
+
+	const comicsView = currentComics.num ? (
+		<ComicsView title={title} num={num} img={img} alt={alt} />
+	) : null;
+
 	return (
-		<>
-			{loading ? (
-				<p>Loading...</p>
-			) : error ? (
-				<ErrorView />
-			) : (
-				<ComicsView title={title} img={img} num={num} alt={alt} />
-			)}
-		</>
+		<>{loading ? <p>Loading...</p> : error ? <ErrorView /> : comicsView}</>
 	);
 };
 
