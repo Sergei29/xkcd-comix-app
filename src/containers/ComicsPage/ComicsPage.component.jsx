@@ -18,13 +18,14 @@ export const ComicsPage = ({
 	useEffect(() => {
 		let willUnmount = false;
 
+		if (comicsList[id]) {
+			setCurrentComics(comicsList[id]);
+		}
+
 		if (!willUnmount) {
 			fetchComicsById(id, comicsList);
 		}
 
-		if (comicsList[id]) {
-			setCurrentComics(comicsList[id]);
-		}
 		return () => {
 			// cleanup for all api calls before unmount:
 			willUnmount = true;
