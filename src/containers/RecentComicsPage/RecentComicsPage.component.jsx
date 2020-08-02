@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchRecent } from "../../redux/actions";
 import ComicsView from "../../components/Comics/ComicsView.component";
@@ -10,24 +10,19 @@ export const RecentComicsPage = ({
 	recentComics,
 	fetchRecent,
 }) => {
-	const status = useRef({ willUnmount: false });
 	const { title, num, img, alt } = recentComics;
 
 	useEffect(() => {
-		if (
-			!status.current.willUnmount &&
-			Object.keys(recentComics).length === 0
-		) {
+		let willUnmount = false;
+		if (!willUnmount && Object.keys(recentComics).length === 0) {
 			fetchRecent();
 		}
-	}, [fetchRecent, recentComics]);
 
-	useEffect(() => {
 		return () => {
 			// cleanup for all api calls before unmount:
-			status.current.willUnmount = true;
+			willUnmount = true;
 		};
-	}, []);
+	}, [fetchRecent, recentComics]);
 
 	const comicsView = recentComics.num ? (
 		<ComicsView title={title} num={num} img={img} alt={alt} />

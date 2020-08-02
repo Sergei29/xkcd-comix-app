@@ -2,8 +2,6 @@ import React from "react";
 import { ImageFrame, Image } from "./ComicsView.styles";
 
 const ComicsView = ({ title, num, img, alt }) => {
-	console.log("ComicsView rendering");
-
 	return (
 		<div>
 			<h2>{title}</h2>
