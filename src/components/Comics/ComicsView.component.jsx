@@ -14,4 +14,4 @@ const ComicsView = ({ title, num, img, alt }) => {
 	);
 };
 
-export default ComicsView;
+export default React.memo(ComicsView);

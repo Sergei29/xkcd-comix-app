@@ -11,7 +11,7 @@ export const RecentComicsPage = ({
 	fetchRecent,
 }) => {
 	const status = useRef({ willUnmount: false });
-	const { title, img, num, alt } = recentComics;
+	const { title, num, img, alt } = recentComics;
 
 	useEffect(() => {
 		if (
@@ -29,16 +29,12 @@ export const RecentComicsPage = ({
 		};
 	}, []);
 
+	const comicsView = recentComics.num ? (
+		<ComicsView title={title} num={num} img={img} alt={alt} />
+	) : null;
+
 	return (
-		<>
-			{loading ? (
-				<p>Loading...</p>
-			) : error ? (
-				<ErrorView />
-			) : (
-				<ComicsView title={title} img={img} num={num} alt={alt} />
-			)}
-		</>
+		<>{loading ? <p>Loading...</p> : error ? <ErrorView /> : comicsView}</>
 	);
 };
 
